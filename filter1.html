@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>limitTo filter</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body  ng-app="myapp" ng-controller="myctrl">
+   
+    <!-- <h1 ng-repeat="rol in r"> {{rol}} </h1> -->
+    <!-- <h1 ng-repeat="rol in r|limitTo:-5"> {{rol}} </h1> -->
+    <!-- <h1 ng-repeat="m in mb|limitTo:5"> {{m|number:3}} </h1> -->
+    <!-- <h1 ng-repeat="nam in n|filter:'c' "> {{nam}} </h1> -->
+    <!-- <h1 ng-repeat="s in sd"> {{s.name}} </h1>
+    <h1 ng-repeat="s in sd"> {{s.name+" , "+ s.roll}} </h1> -->
+    <h1 ng-repeat="s in sd|orderBy:'roll'"> {{s.name+" , "+ s.roll}} </h1>
+ 
+  <!-- find name have g --> 
+</body>
+    <script>
+        var app=angular.module("myapp",[]);
+        app.controller("myctrl",function($scope){
+        var roll=[100,101,102,103,104,105,106,107,108,109,110];
+        var mbdata=[2000.564234,556325.87677263,5883.879721,8765.564786726,66622.7656,7682.67662689,6752.876]
+        var name=["anjali","abhishek","akanshi","akshat","akshita","abhi"];
+
+        var studet=[{"roll":10,"name":"abhishek"},
+        
+        {"roll":11,"name":"anjali"},
+        {"roll":12,"name":"abhi"},
+        {"roll":13,"name":"akshat"}]
+        $scope.r=roll;
+        $scope.mb=mbdata;
+        $name.n=name;
+            $scope.sd=studet;
+        });
+
+
+    </script>
+
+</html>
+
+
+
+
+
+
+<!-- filters
+uppercase
+lowercase
+method:
+TolowerCase();
+ToupperCase();
+date:
+pre-defined text:
+medium short mediumDate shortDate longDate fullDate
+
+formats yyyy,yyy,yy,y,HH,H,hh,h,a,Z,ww ,w, LLLLL,G,GG,GGG,GGGG,MMMM,MM,M
+limitTo
+filter
+orderBy
+
+
+
+
+directives
+
+ng-app 
+ng-show 
+ng-controller 
+ng-model 
+ng-bind
+ng-repeat 
+ng-init 
+ng-click
+ -->
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myctrl">
+        <h1 ng-repeat="ele in stuname">{{ele}}</h1>  <!-- // use for each loop -->
+
+
+        <input type="text" ng-model="a">
+                <!-- {{a}} -->
+                <h1 ng-bind="a"></h1>  <!-- another method to show by using ng-bind -->
+
+
+
+
+                <select ng-model="b">
+                    <option >Red</option>
+                    <option >Green</option>
+                    <option >Blue</option>
+                </select>
+                {{b}}
+
+    </div>
+    
+<script>
+    //[] dependencies 
+
+    var app=angular.module("myapp",[]);
+    app.controller("myctrl",function($scope){
+        var name=["anjali","naina","monika"];   // logic structure and use this data in view we take help of scope.
+        $scope.stuname=name;
+    });
+</script>
+
+
+</body>
+</html>

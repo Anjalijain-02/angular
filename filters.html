@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./angular.min.js"></script>
+    <script src="./module.js"></script>
+</head>
+
+    
+
+
+
+<body  ng-app="myapp" ng-controller="myctrl">
+    <!-- data-> filter-> output -->
+    <!-- create external js file  -->
+    <!-- <h1>{{stuname|lowercase}}</h1>
+    <h1>{{stuname|uppercase}}</h1>
+    <h1>{{stuname.toLowerCase() }}</h1>
+    <h1>{{stuname.toUpperCase() }}</h1> -->
+
+             <h1>{{no|currency}}</h1>                                   
+            <h1>{{no|currency:' &euro;'}}</h1>          
+            <h1>{{no|currency:' &star;'}}</h1>
+
+   
+
+
+    <!-- ***********************return date in well manner***********************
+    <h1>{{dt|date}}</h1> // month date year  -->
+    <!-- ******************************return no of week*****************************
+    <h1>{{dt|date:'ww'}}</h1> -->
+    <!-- ************************return time in default show time in latitude and longitude format***************** -->
+
+     <!-- <h1>{{dt}}</h1>  -->
+  
+
+     <!-- <h1>{{dt|date:'w'}}</h1>      show in single digit no of week
+
+    <h1>{{dt|date:'a'}}</h1>  // return PM -->
+
+   
+
+
+        <!-- *******************************pre-defined text on date ********************************* -->
+    <!-- <h1>{{dt|date:'medium'}}</h1> 
+    <h1>{{dt|date:'mediumDate'}}</h1> 
+    <h1>{{dt|date:'short'}}</h1> 
+    <h1>{{dt|date:'shortDate'}}</h1> 
+    <h1>{{dt|date:'shortTime'}}</h1> 
+    <h1>{{dt|date:'longDate'}}</h1>  -->
+    <!-- *****************************************different year formats****************************** -->
+
+            <!-- <h1>{{dt|date:'yyyy'}}</h1>   // year in 4 digit
+            <h1>{{dt|date:'yy'}}</h1>     // year in 2 digit 
+             <h1>{{dt|date:'y'}}</h1>     // year in 4 digit  format -->
+
+
+
+
+             <!-- ************************************diffrent formats for month************************** -->
+             <!-- <h1>{{dt|date:'MMMM'}}</h1>  // full form of month name(string)
+
+             <h1>{{dt|date:'MMM'}}</h1>  // short form of month name (String)
+         
+             <h1>{{dt|date:'MM'}}</h1>  // integer of month name 
+         
+             <h1>{{dt|date:'M'}}</h1>  // integer of month but in single digit   
+
+             <h1>{{dt|date:'LLLL'}}</h1>    // return stand alone for the month -->
+
+
+            <!-- *************************************** diffrent date formats**************************** -->
+            <!-- <h1>{{dt|date:'dd'}}</h1> // date in 2 integer
+            <h1>{{dt|date:'d'}}</h1>    // date in single digit 
+             -->
+
+
+            <!-- ****************************************diffrent seconds formats ********************* -->
+            <!-- <h1>{{dt|date:'ss'}}</h1>  // 2 digit int in seconds
+            <h1>{{dt|date:'s'}}</h1>  // 2 digit int in seconds
+            <h1>{{dt|date:'.sss'}}</h1>                          // for ms with dot
+            <h1>{{dt|date:'sss'}}</h1>                          // for ms without dot -->
+
+            <!-- <h1>{{dt|date:'a'}}</h1>                            // return AM and PM
+            <h1>{{dt|date:'Z'}}</h1>                            // return time zone  -->
+
+
+
+            <!-- ************************************ diffrent formats for week********************************** -->
+            <!-- <h1>{{dt|date:'ww'}}</h1>                            // return week in 2 digits
+            <h1>{{dt|date:'w'}}</h1>                            // return week in single digit -->
+
+
+
+            <!-- *********************************** diffrent formats for AD- after bith of jisus************************ -->
+            <!-- <h1>{{dt|date:'G'}}</h1>                            // return stand alone for the month
+            <h1>{{dt|date:'GG'}}</h1>                            // return stand alone for the month
+            <h1>{{dt|date:'GGG'}}</h1>                            // return stand alone for the month
+            <h1>{{dt|date:'GGGG'}}</h1>                            // return stand alone for the month -->
+
+            <!-- ***********************************************diffrent format to represnt number********************** -->
+            
+            <!-- <h1>{{no}}</h1>                                           // no default  
+            <h1>{{no|number}}</h1>                                   // increase readability by using comma 
+            <h1>{{no|number:5}}</h1>                                   // return 5 digit after  -->
+
+            <!-- *************************represent currency******************************** -->
+
+            <!-- <h1>{{no|currency}}</h1>                                   // return currency in $
+            <h1>{{no|currency:' &euro;'}}</h1>                                   // return currency in euro
+            <h1>{{no|currency:' &diamond;'}}</h1>                                   // return currency in diamond -->
+
+            <!-- ********************************************************************************
+            ___________________________________________________________________________________________
+            limit to filter=> feild|limitTo:value
+            task:
+            logic structure: numbers [1212121221, 12222212211,12221211212212,38467854786]->10 numbers
+            represent 5 numbers=>  value up to 5 digit after.  
+            starting 5 value :+value and last 5 value : -value
+            *********************************************************************************************
+            ______________________________________________________________________________________________
+ -->
+ <!-- *****************************************solution*************************************************** -->
+
+
+ <!-- <ul>
+    <li ng-repeat="x in value| limitTo : 5">{{x|number:5}}</li>
+    <li ng-repeat="x in value| limitTo : -5">{{x}}</li>
+    
+</ul> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body >
+<h1></h1>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./angular.min.js"></script>
+  </head>
+  <body ng-controller="personCtrl">
+    <h2>Here is the num list</h2>
+    <ul>
+      <li ng-repeat="n in names">{{n|number:5}}</li>
+    </ul>
+    <h2>Here is the starting 5 values</h2>
+    <ul>
+      <li ng-repeat="n in names">{{n|limitTo:5}}</li>
+    </ul>
+    <h2>Here is the last 5 values</h2>
+    <ul>
+      <li ng-repeat="n in names">{{n|limitTo:-5}}</li>
+    </ul>
+  </body>
+  <script>
+    angular.module("myApp", []).controller("personCtrl", function ($scope) {
+      $scope.names = [
+        23344.334,223323.434,121121212.121212121, 122122112.122121, 112212121.12212, 
+        55454545.1221, 64464.332, 6643797.4344, 4334.44344, 22434.444
+    ]
+      ;
+    });
+  </script>
+</html>

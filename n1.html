@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <script src="./angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myctrl"> 
+    <form action="" name="userregister"></form>
+    <input type="text" ng-model="person.fname" name="" id="" placeholder="enter content">
+    <input type="button" value="" ng-click="showcontent()">
+    <h1>{{person.fname}}</h1>
+
+
+
+
+    <!-- <h1> custom filter</h1>
+    <h1>{{subname}}</h1> -->
+    <!-- <h1>{{subname| filter}}</h1>
+    
+        <h1 ng-repeat="a in list">{{$index}}{{$first?'firstitem ':''}}{{$last?'lastitem ':''}}
+            {{$even?'evenpos ':''}}{{$odd?'oddone ':''}}</h1>
+ -->
+
+
+    <script>
+        // var app=angular.module('myapp',[]);
+        // app.controller('myctrl',function($scope) 
+        // {
+        //     $scope.subname= "fullStack-mean-&-mern";
+        //     $scope.list=['apple','orange','grapes','papaya']
+
+        // });
+
+        // app.filter('customfilter',function(){
+
+
+        //     return function(input){
+        //         // return input.charAt(0).toUpperCase()+input.substr(1).toLoweCase();
+        //         return input.replace(/-/g, "+");
+        //     }
+        // });
+
+
+
+
+        var app=angular.module("myapp",[]);
+
+
+app.controller("myctrl",function($scope)
+{
+    $scope.person={
+        fname:'anjali',
+        lname:'jain'
+    }
+$scope.showcontent =function()
+
+    //  $scope.value=[12212122.122121,144343353.12221,13565522.122121,43363646313.65,5.433452523,-665523537745,-754434334.553655363,-865554543546.5455,-9643.876,-10.67465467];
+    // $scope.value=[1111.1111111,2222.2222222,3333.3333333,44444.4444444,
+    //     55555.55555 ,-66666.6666666,-77777.7777777,-88888.8888888,-99999.9999999,-10101010.1010101];
+
+});
+
+    </script>
+
+
+</body>
+</html>
